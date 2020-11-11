@@ -10,7 +10,7 @@ BUPT-SCSS第三次大数据安全实验演示demo，包含XSS和在线追踪两�
 
 本Demo是使用php-mysql架构搭建的典型的Web留言板应用，留言板具有注册、登录、对指定用户留言、查看其他用户给自己的留言等功能。如果后端对用户输入的留言内容过滤不严，就容易出现XSS漏洞。
 
-![](./pics/Screen Shot 2020-11-11 at 11.36.45.png)
+<img src="./pics/Screen Shot 2020-11-11 at 11.36.45.png" style="zoom:50%;" />
 
 XSS的payload代码放置在公网XSS平台上，代码具有窃取Headers、Cookies等功能。
 
