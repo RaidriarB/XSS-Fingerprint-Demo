@@ -94,13 +94,13 @@ mysql  Ver 14.14 Distrib 5.7.32, for Linux (x86_64) using  EditLine wrapper
 
 进入c1的登录界面，同时使用控制台Network监视流量，可以看到XSS Payload被加载、Cookie以HTTP-GET方式外带的过程。
 
-![Screen Shot 2020-11-11 at 12.12.10](/Users/raidriarb/Library/Application Support/typora-user-images/Screen Shot 2020-11-11 at 12.12.10.png)
+![](./pics/Screen Shot 2020-11-11 at 12.12.10.png)
 
-![Screen Shot 2020-11-11 at 12.12.57](./pics/Screen Shot 2020-11-11 at 12.12.57.png)
+![](./pics/Screen Shot 2020-11-11 at 12.12.57.png)
 
 检查我们的XSS平台，确实获得了用户Cookie。
 
-![Screen Shot 2020-11-11 at 12.14.16](./pics/Screen Shot 2020-11-11 at 12.14.16.png)
+![](./pics/Screen Shot 2020-11-11 at 12.14.16.png)
 
 ## 在线追踪实验
 
