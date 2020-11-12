@@ -29,7 +29,8 @@ setTimeout(function () {
     console.log("webgl fingerprint : "+wfp);
 
 var httpRequest = new XMLHttpRequest();
-var url = "http://osk53t.ceye.io?canvas_fp="+cfp+"&webgl_fp="+wfp;
+//var url = "http://osk53t.ceye.io?canvas_fp="+cfp+"&webgl_fp="+wfp;
+var url = "http://127.0.0.1:8888?canvas_fp="+cfp+"&webgl_fp="+wfp;
 httpRequest.open('GET', url, true);
 httpRequest.setRequestHeader("Content-type","application/x-www-form-urlencoded");//设置请求头 注：post方式必须设置请求头（在建立连接后设置请求头）
 httpRequest.send();
